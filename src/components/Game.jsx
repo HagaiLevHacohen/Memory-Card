@@ -8,7 +8,7 @@ function Game({backToMenu, bestScore, setBestScore, pokemonList}) {
   const [alreadySelectedIDs, setAlreadySelectedIDs] = useState([]);
   const [showDialog, setShowDialog] = useState(false);
   const [animation, setAnimation] = useState("");
-  const [verdictText, setVerdictText] = useState("");
+  const [verdictText, setVerdictText] = useState("Correct");
   const winningScore = cards.length;
   const currentScore = alreadySelectedIDs.length;
 
