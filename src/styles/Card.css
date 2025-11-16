@@ -1,0 +1,28 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100px;
+    height: 150px;
+    padding: 20px 0;
+
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    font-family: var(--font-display);
+    color: var(--color-primary);
+}
+
+.card:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 12px var(--color-accent);
+}
+
+.card.correct {
+    box-shadow: 0 0 16px green;
+}
+
+.card.incorrect {
+    box-shadow: 0 0 16px red;
+}

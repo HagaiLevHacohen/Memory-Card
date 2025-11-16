@@ -1,0 +1,91 @@
+.game {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 30px;
+    color: var(--color-primary);
+}
+.game > .game-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.game > .game-content > p {
+    font-size: 54px;
+    visibility: hidden;
+    transform: scale(0);
+}
+
+.game > .game-content > p.correct {
+    color: green;
+    visibility: visible;
+    animation: verdict-animation 1s ease-in-out;
+}
+
+.game > .game-content > p.incorrect {
+    color: red;
+    visibility: visible;
+    animation: verdict-animation 1s ease-in-out;
+}
+
+@keyframes verdict-animation {
+  0% { transform: scale(0) }
+  50% { transform: scale(1) }
+  100% { transform: scale(0) }
+}
+
+.game > .game-content > .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: 150px;
+    gap: 20px;
+}
+
+.game > .header {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 75px 75px;
+
+    height: 150px;
+}
+
+.game > .header > .scores {
+    grid-column: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.scores > .current-score{
+    font-size: 18px;
+}
+.scores > .best-score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.game > .header > .progress-bar {
+    grid-column: 2 / 3 ;
+    grid-row: 2 / 3;
+    align-self: center;
+
+    height: 25px;
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+}
+
+.progress-bar .progress {
+    border-radius: 6px;
+    background-color: var(--color-primary);
+    height: 100%;
+    width: 10px;
+
+    transition: width ease-in-out 0.2s;
+}
+
+.progress-bar .progress:hover {
+    width: 100%;
+}
