@@ -26,3 +26,10 @@
 .card.incorrect {
     box-shadow: 0 0 16px red;
 }
+
+@media (hover: none) and (pointer: coarse) {
+  .card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}

@@ -12,8 +12,23 @@
 }
 
 .modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 200px;
+  background: var(--color-bg);
+  color: var(--color-primary);
+  padding: 50px 20px;
+  border-radius: 10px;
   text-align: center;
+  border: 2px solid var(--color-primary);
+}
+
+.modal-content > p {
+  font-size: 24px;
+}
+
+.modal-content > button {
+  font-size: 18px;
 }

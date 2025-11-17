@@ -16,7 +16,8 @@
 
 .menu > .instructions {
     color: var(--color-text);
-    font-size: 20px;
+    font-size: 16x;
+    text-align: center;
 }
 
 .menu > .game-modes {
@@ -55,4 +56,20 @@
 
 .menu > .start-btn {
     width: 60px;
+}
+
+/* Phones (portrait & landscape) */
+@media (max-width: 600px) {
+    .menu > .game-modes {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu .mode-item > button {
+        width: 80vw;
+    }
+}
+
+/* Tablets (portrait & small landscape) */
+@media (min-width: 601px) and (max-width: 900px) {
+
 }

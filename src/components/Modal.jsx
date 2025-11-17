@@ -5,7 +5,7 @@ function Modal({onClose}) {
   return (
     <div className="modal-backdrop">
       <div className="modal-content">
-        <p></p>
+        <p>Congratulation! You Won!</p>
         <button onClick={onClose}>Return to Menu</button>
       </div>
     </div>
